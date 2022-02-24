@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Music Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="media/logo.png" class="logo">
+                <ul>
+                    <li><a href="file:///Users/ayakoz_zharasbay/Downloads/Kunde%202/index.html#buy">Home</a></li>
+                    <li><a href="file:///Users/ayakoz_zharasbay/Downloads/Kunde%202/index.html#functions">Functions</a></li>
+                    <li><a href="file:///Users/ayakoz_zharasbay/Downloads/Kunde%202/index.html#kunde">Kunde</a></li>
+                    <li><a href="file:///Users/ayakoz_zharasbay/Downloads/Kunde%202/index.html#packages">Packages</a></li>
+                    <li><a href="file:///Users/ayakoz_zharasbay/Downloads/Kunde%202/index.html#review">Review</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="left-col">
+                    <h1>Listen and Relax</h1>
+                </div>
+                <div class="right-col">
+                    <p>Click here to listen</p>
+                    <img src="media/play.png" id="icon">
+                </div>
+            </div>
+
+        </div>
+
+        <audio id="mySong">
+            <source src="media/song.mp3" type="audio/mp3">
+        </audio>
+
+        <script>
+            var mySong = document.getElementById("mySong");
+            var icaon = document.getElementById("icon");
+
+            icon.onclick = function(){
+                if(mySong.paused){
+                    mySong.play();
+                    icon.src = "media/pause.png";
+                }else{
+                    mySong.pause();
+                    icon.src = "media/play.png";
+                }
+            }
+
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+<div class="container">
+
+    <div class="video-links-container">
+        <a href="yoga01.mp4" class="video-links">1. 10 min Morning Yoga Full Body Stretch (beginner) </a>
+        <a href="yoga02.mp4" class="video-links">2. 10 min Flexibility Full Body Yoga Flow (beginner) </a>
+        <a href="yoga03.mp4" class="video-links">3. 15 min Morning Yoga | Weight Loss edition (beginner) </a>
+    </div>
+
+    <div class="video-container">
+        <video src="yoga01.mp4" loop muted controls class="video"></video>
+    </div>
+
+</div>
+
+<script>
+
+document.querySelectorAll('.video-links').forEach(links =>{
+    links.addEventListener('click', (e) =>{
+        e.preventDefault();
+        var src = links.getAttribute('href');
+        document.querySelector('.video').src = src;
+        document.querySelector('.video').play();
+    });
+});
+
+</script>
+
+</body>
+</html>
